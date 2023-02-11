@@ -12,6 +12,7 @@ Intergrates with Dropbox for file create/file delete.
 
 Intergrates with Lifx Bulb - for turn ON/OFF
 
+Intergrates with Python Flask - Python Flask end points used to intergrate with MongoDB. All Authentication to Mongo DB taken care by Python Flask module. Exposes endpoints to Telegram BOT to log. 
 
 
 
