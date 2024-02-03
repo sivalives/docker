@@ -1,0 +1,198 @@
+version: "3.6"
+
+networks:
+  splunknet:
+    driver: bridge
+    attachable: true
+
+volumes:
+  splunk-sh-1-var:
+  splunk-sh-1-etc:
+  splunk-sh-2-var:
+  splunk-sh-2-etc:
+  splunk-sh-3-var:
+  splunk-sh-3-etc:
+  splunk-idx-1-var:
+  splunk-idx-1-etc:
+  splunk-idx-2-var:
+  splunk-idx-2-etc:
+  splunk-idx-3-var:
+  splunk-idx-3-etc:
+  splunk-deployment-1-var:
+  splunk-deployment-1-etc:
+  splunk-cm-1-var:
+  splunk-cm-1-etc:
+  splunk-deployer-1-var:
+  splunk-deployer-1-etc:
+
+services:
+  splunk-sh-1:
+    networks:
+      splunknet:
+        aliases:
+          - splunk-sh-1
+    image: splunk/splunk:9.1.3
+    container_name: splunk-sh-1
+    environment:
+      - SPLUNK_START_ARGS=--accept-license
+      - SPLUNK_PASSWORD=hello123
+      - DEBUG=true
+      - SPLUNK_UPGRADE=true
+    ports:
+      - 48000:8000
+      - 49000:8089
+    volumes:
+      - splunk-sh-1-var:/opt/splunk/var
+      - splunk-sh-1-etc:/opt/splunk/etc
+    
+  splunk-sh-2:
+    networks:
+      splunknet:
+        aliases:
+          - splunk-sh-2
+    image: splunk/splunk:9.1.3
+    container_name: splunk-sh-2
+    environment:
+      - SPLUNK_START_ARGS=--accept-license
+      - SPLUNK_PASSWORD=hello123
+      - DEBUG=true
+      - SPLUNK_UPGRADE=true
+    ports:
+      - 48001:8000
+      - 49001:8089
+    volumes:
+      - splunk-sh-2-var:/opt/splunk/var
+      - splunk-sh-2-etc:/opt/splunk/etc
+
+  splunk-sh-3:
+    networks:
+      splunknet:
+        aliases:
+          - splunk-sh-3
+    image: splunk/splunk:9.1.3
+    container_name: splunk-sh-3
+    environment:
+      - SPLUNK_START_ARGS=--accept-license
+      - SPLUNK_PASSWORD=hello123
+      - DEBUG=true
+      - SPLUNK_UPGRADE=true
+    ports:
+      - 48002:8000
+      - 49002:8089
+    volumes:
+      - splunk-sh-3-var:/opt/splunk/var
+      - splunk-sh-3-etc:/opt/splunk/etc
+
+  splunk-idx-1:
+    networks:
+      splunknet:
+        aliases:
+          - splunk-idx-1
+    image: splunk/splunk:9.1.3
+    container_name: splunk-idx-1
+    environment:
+      - SPLUNK_START_ARGS=--accept-license
+      - SPLUNK_PASSWORD=hello123
+      - DEBUG=true
+      - SPLUNK_UPGRADE=true
+    ports:
+      - 48003:8000
+      - 49003:8089
+    volumes:
+      - splunk-idx-1-var:/opt/splunk/var
+      - splunk-idx-1-etc:/opt/splunk/etc
+    
+  splunk-idx-2:
+    networks:
+      splunknet:
+        aliases:
+          - splunk-idx-2
+    image: splunk/splunk:9.1.3
+    container_name: splunk-idx-2
+    environment:
+      - SPLUNK_START_ARGS=--accept-license
+      - SPLUNK_PASSWORD=hello123
+      - DEBUG=true
+      - SPLUNK_UPGRADE=true
+    ports:
+      - 48004:8000
+      - 49004:8089
+    volumes:
+      - splunk-idx-2-var:/opt/splunk/var
+      - splunk-idx-2-etc:/opt/splunk/etc
+
+  splunk-idx-3:
+    networks:
+      splunknet:
+        aliases:
+          - splunk-idx-3
+    image: splunk/splunk:9.1.3
+    container_name: splunk-idx-3
+    environment:
+      - SPLUNK_START_ARGS=--accept-license
+      - SPLUNK_PASSWORD=hello123
+      - DEBUG=true
+      - SPLUNK_UPGRADE=true
+    ports:
+      - 48005:8000
+      - 49005:8089
+    volumes:
+      - splunk-idx-3-var:/opt/splunk/var
+      - splunk-idx-3-etc:/opt/splunk/etc
+
+  splunk-deployment-1:
+    networks:
+      splunknet:
+        aliases:
+          - splunk-deployment-1
+    image: splunk/splunk:9.1.3
+    container_name: splunk-deployment-1
+    environment:
+      - SPLUNK_START_ARGS=--accept-license
+      - SPLUNK_PASSWORD=hello123
+      - DEBUG=true
+      - SPLUNK_UPGRADE=true
+    ports:
+      - 48006:8000
+      - 49006:8089
+    volumes:
+      - splunk-deployment-1-var:/opt/splunk/var
+      - splunk-deployment-1-etc:/opt/splunk/etc
+
+  splunk-cm-1:
+    networks:
+      splunknet:
+        aliases:
+          - splunk-cm-1
+    image: splunk/splunk:9.1.3
+    container_name: splunk-cm-1
+    environment:
+      - SPLUNK_START_ARGS=--accept-license
+      - SPLUNK_PASSWORD=hello123
+      - DEBUG=true
+      - SPLUNK_UPGRADE=true
+    ports:
+      - 48007:8000
+      - 49007:8089
+    volumes:
+      - splunk-cm-1-var:/opt/splunk/var
+      - splunk-cm-1-etc:/opt/splunk/etc
+
+  splunk-deployer-1:
+    networks:
+      splunknet:
+        aliases:
+          - splunk-deployer-1
+    image: splunk/splunk:9.1.3
+    container_name: splunk-deployer-1
+    environment:
+      - SPLUNK_START_ARGS=--accept-license
+      - SPLUNK_PASSWORD=hello123
+      - DEBUG=true
+      - SPLUNK_UPGRADE=true
+    ports:
+      - 48008:8000
+      - 49008:8089
+    volumes:
+      - splunk-deployer-1-var:/opt/splunk/var
+      - splunk-deployer-1-etc:/opt/splunk/etc
