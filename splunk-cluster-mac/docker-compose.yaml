@@ -37,7 +37,7 @@ services:
       - SPLUNK_START_ARGS=--accept-license
       - SPLUNK_PASSWORD=hello123
       - DEBUG=true
-      - SPLUNK_UPGRADE=true
+
     ports:
       - 48000:8000
       - 49000:8089
@@ -56,7 +56,7 @@ services:
       - SPLUNK_START_ARGS=--accept-license
       - SPLUNK_PASSWORD=hello123
       - DEBUG=true
-      - SPLUNK_UPGRADE=true
+
     ports:
       - 48001:8000
       - 49001:8089
@@ -75,7 +75,7 @@ services:
       - SPLUNK_START_ARGS=--accept-license
       - SPLUNK_PASSWORD=hello123
       - DEBUG=true
-      - SPLUNK_UPGRADE=true
+
     ports:
       - 48002:8000
       - 49002:8089
@@ -94,7 +94,7 @@ services:
       - SPLUNK_START_ARGS=--accept-license
       - SPLUNK_PASSWORD=hello123
       - DEBUG=true
-      - SPLUNK_UPGRADE=true
+
     ports:
       - 48003:8000
       - 49003:8089
@@ -113,7 +113,7 @@ services:
       - SPLUNK_START_ARGS=--accept-license
       - SPLUNK_PASSWORD=hello123
       - DEBUG=true
-      - SPLUNK_UPGRADE=true
+
     ports:
       - 48004:8000
       - 49004:8089
@@ -132,7 +132,7 @@ services:
       - SPLUNK_START_ARGS=--accept-license
       - SPLUNK_PASSWORD=hello123
       - DEBUG=true
-      - SPLUNK_UPGRADE=true
+
     ports:
       - 48005:8000
       - 49005:8089
@@ -151,7 +151,7 @@ services:
       - SPLUNK_START_ARGS=--accept-license
       - SPLUNK_PASSWORD=hello123
       - DEBUG=true
-      - SPLUNK_UPGRADE=true
+
     ports:
       - 48006:8000
       - 49006:8089
@@ -170,7 +170,7 @@ services:
       - SPLUNK_START_ARGS=--accept-license
       - SPLUNK_PASSWORD=hello123
       - DEBUG=true
-      - SPLUNK_UPGRADE=true
+
     ports:
       - 48007:8000
       - 49007:8089
@@ -189,7 +189,7 @@ services:
       - SPLUNK_START_ARGS=--accept-license
       - SPLUNK_PASSWORD=hello123
       - DEBUG=true
-      - SPLUNK_UPGRADE=true
+
     ports:
       - 48008:8000
       - 49008:8089
